@@ -1,0 +1,25 @@
+# --- Identity ---
+id: "1e3c7052-94af-43e4-a8ec-1814aceb0cc9"
+name: "write-headlines"
+display_name: "Write Headlines"
+description: "Generates compelling headlines optimised for clicks and clarity"
+version: "1.0.0"
+engine: ">=0.1.0"
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+licence: "MIT"
+repository: "https://github.com/skrpts/hub-shared-write-headlines"
+category: "shared"
+tags:
+  - "shared"
+  - "prompt"
+contents:
+  skills: 0
+  prompts: 1
+  workflows: 0
+  services: 0
+  sources: 0
+  documents: 0
+  assets: 0
+  total: 1
