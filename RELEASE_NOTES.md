@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.0.3
+Fix-forward: the v1.0.2 publish stored either no content or JSON-invalid content in D1's object_manifest column for this dep. Root cause was `d1Execute` shelling out via `wrangler d1 execute --command="..."` — bash double-quote parsing silently mangled JSON-encoded markdown containing backslashes or multi-byte UTF-8. Fixed by routing SQL through `--file=` so wrangler reads bytes directly. v1.0.3 republishes against the fixed pipeline. No content changes in the signed bundle; only the D1 metadata projection.
+
 ## v1.0.2
 GH#651 Hub publish — republish to populate `nodes[].content` in object_manifest for prompt nodes. The /api/shared/<slug>/<v>/metadata endpoint now exposes `nodes[].content` for type='prompt' (GH#650 / GH#651), used by the engine validator's dep-aware loop-body `{{loop.item}}` interpolation check. Pre-fix publish-skrpt.mjs stripped content uniformly; aba4ccd7 preserves it for prompts. No content changes from v1.0.1; signed-bundle data identical, only D1 object_manifest gains the `content` field.
 
