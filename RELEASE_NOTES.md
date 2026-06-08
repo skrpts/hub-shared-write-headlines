@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.0.4
+GH#657 Framing B — republish wave. Bundle now ships `dependencies: []` in its signed manifest (injected by `publish-skrpt.mjs` for `--shared` publishes), so the App's dep-referenced install pipeline (post-PR #47) accepts it on standalone update via Hub Update-all. No content changes.
+
 ## v1.0.3
 Fix-forward: the v1.0.2 publish stored either no content or JSON-invalid content in D1's object_manifest column for this dep. Root cause was `d1Execute` shelling out via `wrangler d1 execute --command="..."` — bash double-quote parsing silently mangled JSON-encoded markdown containing backslashes or multi-byte UTF-8. Fixed by routing SQL through `--file=` so wrangler reads bytes directly. v1.0.3 republishes against the fixed pipeline. No content changes in the signed bundle; only the D1 metadata projection.
 
