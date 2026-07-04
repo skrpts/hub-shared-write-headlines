@@ -4,7 +4,11 @@ id: write-headlines
 title: "Write Headlines"
 description: "Generates compelling headlines optimised for clicks and clarity"
 tags: [Production, Content, Writing]
-
+context_params:
+  source:
+    label: "Source"
+    description: "The content to write headlines for."
+    default_from_previous: true
 metadata:
   output_format: markdown
   prompt_type: task
@@ -20,7 +24,7 @@ You are a headline writer. Generate headline options for the content below.
 
 ### Content to Headline
 
-{{steps.previous.output}}
+{{step.context.source}}
 
 ### Instructions
 
