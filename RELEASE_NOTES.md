@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.0.6
+GH#845 — republish with American English (en-US) content, completing the source-only GH#805 flip that never reached the Hub. Copy only — no functional or behaviour change.
+
 ## v1.0.5
 GH#781 / K-045 — declare a `source` input slot (`context_params.source: { default_from_previous: true }`) and read `{{step.context.source}}` instead of positional `{{steps.previous.output}}`, so a consuming workflow can map the content to headline explicitly via `from_step`. Backward-compatible: unbound `source` defaults to the previous step output, so linear consumers are unchanged.
 

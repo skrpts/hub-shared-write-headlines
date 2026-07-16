@@ -2,7 +2,7 @@
 type: prompt
 id: write-headlines
 title: "Write Headlines"
-description: "Generates compelling headlines optimised for clicks and clarity"
+description: "Generates compelling headlines optimized for clicks and clarity"
 tags: [Production, Content, Writing]
 context_params:
   source:
