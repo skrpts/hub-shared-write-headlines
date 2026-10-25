@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.0.7
+GH#1100 migration wave — retire `default_from_previous` on the `source` slot.
+
+The slot is now declared **required**. The body already read `{{step.context.source}}`; what changed is that the value must be bound explicitly rather than falling back to whatever step happened to run before. `default_from_previous` was positional resolution wearing a declaration (K-045 Option A), and K-073 revoked it.
+
+**This prompt stays in the C7 source-slot registry, and its `since` stays 1.0.5.** That version records when the bindable slot was introduced, which is not changed by removing the fallback. Four consumers invoke this prompt; three do not bind the slot and will need to when they bump.
+
 ## v1.0.6
 GH#845 — republish with American English (en-US) content, completing the source-only GH#805 flip that never reached the Hub. Copy only — no functional or behaviour change.
 

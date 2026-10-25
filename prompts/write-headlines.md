@@ -8,7 +8,7 @@ context_params:
   source:
     label: "Source"
     description: "The content to write headlines for."
-    default_from_previous: true
+    required: true
 metadata:
   output_format: markdown
   prompt_type: task

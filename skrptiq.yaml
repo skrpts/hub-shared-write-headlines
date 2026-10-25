@@ -3,7 +3,7 @@ id: "e95fc43e-3d81-4fbb-82be-279c8a58757f"
 name: "write-headlines"
 display_name: "Write Headlines"
 description: "Generates compelling headlines optimized for clicks and clarity"
-version: "1.0.6"
+version: "1.0.7"
 engine: ">=0.1.0"
 author:
   name: "skrptiq"
@@ -28,7 +28,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-07-16T14:50:11.545Z"
+  scanned_at: "2026-10-25T18:23:52.976Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"
